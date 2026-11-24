@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Explore embalagens e descartáveis para food service, delivery e varejo. Monte sua lista e solicite um orçamento à Jin Embalagens.">
+  <title>Jin Embalagens | Catálogo e orçamentos</title>
+  <link rel="icon" href="assets/jin-mark.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/hero-editorial.webp" as="image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="icons.js"></script>
+  <script defer src="catalog-data.js"></script>
+  <script defer src="site-links.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="utility-bar">
+    <div class="container utility-inner"><span><span data-icon="pin"></span> Distribuição a partir de Campinas, SP</span><a href="#unidades">Nossas unidades</a><a href="tel:+551937467000"><span data-icon="phone"></span> (19) 3746-7000</a></div>
+  </div>
+  <header class="site-header container">
+    <a class="brand" href="#inicio" aria-label="Jin Embalagens, início"><img src="assets/jin-logo.png" alt="" width="58" height="47"></a>
+    <nav class="main-nav" id="menu" aria-label="Menu principal">
+      <a href="produtos/index.html" data-page-link="produtos/">Catálogo</a>
+      <details class="nav-categories"><summary>Categorias <span data-icon="chevron-down"></span></summary><div id="category-menu"></div></details>
+      <a href="#segmentos">Segmentos</a>
+      <a href="#personalizacao">Personalização</a>
+      <a href="quem-somos/index.html" data-page-link="quem-somos/">Sobre a Jin</a>
+      <a href="contato/index.html" data-page-link="contato/">Contato</a>
+    </nav>
+    <form class="search" role="search" id="search-form">
+      <span data-icon="search"></span><label class="sr-only" for="search">Pesquisar no catálogo</label>
+      <input id="search" name="busca" type="search" placeholder="Buscar embalagens…" autocomplete="off">
+    </form>
+    <div class="header-actions">
+      <button class="bag-button" id="open-quote" type="button" aria-label="Lista de orçamento"><span data-icon="bag"></span><span class="bag-label">Orçamento</span><span class="cart-count" hidden>0</span></button>
+      <button class="icon-button menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span data-icon="menu"></span></button>
+    </div>
+  </header>
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-label="Destaques Jin Embalagens">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-content" aria-live="polite">
+          <p class="eyebrow hero-label" id="hero-label">Embalagens para o setor alimentício</p>
+          <h1 id="hero-title">A embalagem certa <em>para cada negócio.</em></h1>
+          <p id="hero-description">Do balcão ao delivery, encontre embalagens e descartáveis para a rotina do seu negócio.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" id="hero-link" href="#produtos">Explorar catálogo <span data-icon="arrow-right"></span></a>
+            <a class="button button-outline" href="#contato">Falar com a Jin</a>
+          </div>
+        </div>
+        <div class="hero-navigation">
+          <button class="icon-button hero-control" id="hero-prev" type="button" aria-label="Destaque anterior"><span data-icon="chevron-left"></span></button>
+          <div id="hero-dots" class="hero-dots" aria-label="Selecionar destaque"></div>
+          <button class="icon-button hero-control" id="hero-next" type="button" aria-label="Próximo destaque"><span data-icon="chevron-right"></span></button>
+        </div>
+      </div>
+    </section>
+    <div class="service-strip">
+      <ul class="container benefits" aria-label="Serviços Jin">
+        <li><span data-icon="package"></span><div><strong>No mercado desde 1989</strong><small>Embalagens para o setor alimentício</small></div></li>
+        <li><span data-icon="truck"></span><div><strong>Logística própria</strong><small><a href="#unidades">Veja a área de atendimento</a></small></div></li>
+        <li><span data-icon="headphones"></span><div><strong>Orientação técnica</strong><small><a href="#contato">Conte com a equipe comercial</a></small></div></li>
+      </ul>
+    </div>
+    <section class="section container" id="categorias" aria-labelledby="category-title">
+      <div class="section-header">
+        <div><p class="eyebrow">Encontre a embalagem certa</p><h2 id="category-title">Explore por categoria</h2></div>
+        <a class="text-link" href="#produtos" data-category="todos">Ver catálogo <span data-icon="arrow-right"></span></a>
+      </div>
+      <div class="category-grid" id="category-grid"></div>
+    </section>
+    <section class="section container" id="produtos" aria-labelledby="products-title">
+      <div class="section-header">
+        <div><p class="eyebrow">Catálogo Jin</p><h2 id="products-title">Encontre seu produto</h2></div>
+        <a class="text-link" href="produtos/index.html" data-page-link="produtos/">Catálogo completo <span data-icon="arrow-up-right"></span></a>
+      </div>
+      <div class="catalog-toolbar">
+        <label class="sr-only" for="catalog-search">Nome ou referência</label>
+        <div class="search catalog-search"><span data-icon="search"></span><input type="search" id="catalog-search" placeholder="Buscar por nome ou referência…" autocomplete="off"></div>
+        <div class="catalog-filter"><label class="sr-only" for="catalog-category">Filtrar por categoria</label><select id="catalog-category"><option value="todos">Todas as categorias</option></select></div>
+        <div class="catalog-filter"><label class="sr-only" for="catalog-sort">Ordenar resultados</label><select id="catalog-sort"><option value="destaques">Destaques</option><option value="az">Nome A–Z</option><option value="za">Nome Z–A</option></select></div>
+      </div>
+      <div class="catalog-summary">
+        <p id="catalog-status" aria-live="polite"></p>
+        <button class="text-link" id="reset-catalog" type="button" hidden>Limpar filtros</button>
+      </div>
+      <div class="product-grid" id="product-grid"></div>
+      <div class="catalog-controls" id="catalog-pagination" aria-label="Páginas do catálogo">
+        <button class="icon-button carousel-control" id="product-prev" type="button" aria-label="Produtos anteriores"><span data-icon="chevron-left"></span></button><span id="page-status"></span><button class="icon-button carousel-control" id="product-next" type="button" aria-label="Próximos produtos"><span data-icon="chevron-right"></span></button>
+      </div>
+    </section>
+    <section class="section container" id="segmentos" aria-labelledby="segments-title">
+      <div class="section-header"><div><p class="eyebrow">Soluções por segmento</p><h2 id="segments-title">Escolha pelo seu tipo de negócio</h2></div></div>
+      <div class="segment-grid">
+        <a class="segment-card" href="?categoria=delivery#produtos" data-category="delivery"><img src="assets/segmento-restaurante.webp" alt="" width="620" height="390" loading="lazy"><div><h3>Restaurantes e delivery</h3><p>Embalagens para refeições e pedidos para viagem.</p><span class="text-link">Ver embalagens para delivery <span data-icon="arrow-right"></span></span></div></a>
+        <a class="segment-card" href="?categoria=copos#produtos" data-category="copos"><img src="assets/segmento-cafe.webp" alt="" width="620" height="390" loading="lazy"><div><h3>Padarias e cafeterias</h3><p>Copos e opções para o atendimento de balcão.</p><span class="text-link">Ver copos <span data-icon="arrow-right"></span></span></div></a>
+        <a class="segment-card" href="?categoria=bandejas#produtos" data-category="bandejas"><img src="assets/segmento-mercado.webp" alt="" width="620" height="390" loading="lazy"><div><h3>Mercados e hortifrutis</h3><p>Bandejas para organizar e apresentar produtos.</p><span class="text-link">Ver bandejas <span data-icon="arrow-right"></span></span></div></a>
+      </div>
+    </section>
+    <section class="section container" id="personalizacao" aria-labelledby="personalization-title">
+      <div class="promo">
+        <div class="promo-photo"></div>
+        <div class="promo-copy">
+          <p class="eyebrow">Personalização</p>
+          <h2 id="personalization-title">Sua marca em cada entrega.</h2>
+          <p>Escolha a embalagem e envie seu logotipo pelo formulário da Jin para solicitar uma simulação de aplicação.</p>
+          <a class="button button-outline" href="https://jin.com.br/contato/">Solicitar personalização <span data-icon="arrow-up-right"></span></a>
+        </div>
+      </div>
+    </section>
+    <section class="section container about-grid" id="sobre" aria-labelledby="about-title">
+      <img class="about-photo" src="assets/institucional.webp" alt="Matriz da Jin Embalagens em Campinas" width="407" height="350" loading="lazy">
+      <div class="about-copy">
+        <p class="eyebrow">Sobre a Jin</p><h2 id="about-title">Atendendo o setor alimentício desde 1989.</h2>
+        <p>Com matriz em Campinas, a Jin distribui embalagens descartáveis e fabrica filmes de PVC. A equipe dá orientação técnica e opera com frota própria para atender a região.</p>
+        <a class="text-link" href="quem-somos/index.html" data-page-link="quem-somos/">Conhecer a empresa <span data-icon="arrow-up-right"></span></a>
+      </div>
+    </section>
+    <section class="section contact-section" id="contato" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div class="contact-card">
+          <p class="eyebrow">Atendimento comercial</p><h2 id="contact-title">Fale com a Jin</h2>
+          <p>Quer confirmar preços, disponibilidade ou entrega? Envie sua lista ou fale diretamente com a equipe.</p>
+          <a class="button button-primary" href="https://wa.me/5519997794448"><span data-icon="message"></span> Falar no WhatsApp</a>
+          <div class="contact-links"><a href="tel:+551937467000"><span data-icon="phone"></span> (19) 3746-7000</a><a href="mailto:sac@jin.com.br">sac@jin.com.br</a></div>
+        </div>
+        <div class="faq">
+          <h2>Perguntas frequentes</h2>
+          <details><summary>Como solicito um orçamento? <span data-icon="chevron-down"></span></summary><p>Adicione produtos à lista, ajuste o número de lotes e abra a mensagem no WhatsApp para revisar e enviar.</p></details>
+          <details><summary>Quais regiões a Jin atende? <span data-icon="chevron-down"></span></summary><p>A Jin informa atendimento nas regiões de Campinas, Limeira, Sorocaba, Jundiaí e no Sul de Minas. Confirme o prazo e a entrega para o seu CEP com a equipe comercial.</p></details>
+          <details><summary>Como personalizo uma embalagem? <span data-icon="chevron-down"></span></summary><p>No <a href="https://jin.com.br/contato/">formulário oficial da Jin</a>, escolha a embalagem e anexe o logotipo para solicitar uma simulação.</p></details>
+          <details><summary>Onde encontro capacidade e unidades por lote? <span data-icon="chevron-down"></span></summary><p>Abra os detalhes do produto para consultar a apresentação e a referência. Cada ficha também tem um link para o catálogo oficial.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="section container locations" id="unidades" aria-labelledby="locations-title">
+      <div class="section-header"><div><p class="eyebrow">Presença regional</p><h2 id="locations-title">Encontre uma unidade</h2></div><a class="text-link" href="https://jin.com.br/contato/">Endereços e mapas <span data-icon="arrow-up-right"></span></a></div>
+      <ul class="location-grid">
+        <li><span data-icon="pin"></span><div><h3>Campinas</h3><p>Matriz · Campos dos Amarais</p><a href="tel:+551937467000">(19) 3746-7000</a></div></li>
+        <li><span data-icon="pin"></span><div><h3>Itu</h3><p>Jardim Emicol</p><a href="tel:+5511942428323">(11) 94242-8323</a></div></li>
+        <li><span data-icon="pin"></span><div><h3>Limeira</h3><p>Centro Industrial</p><a href="tel:+551934441328">(19) 3444-1328</a></div></li>
+        <li><span data-icon="pin"></span><div><h3>Valinhos</h3><p>Macuco</p><a href="tel:+551938814421">(19) 3881-4421</a></div></li>
+        <li><span data-icon="pin"></span><div><h3>Mogi Mirim</h3><p>São João da Glória</p><a href="tel:+551937467000">(19) 3746-7000</a></div></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand" href="#inicio" aria-label="Jin Embalagens, início"><img src="assets/jin-logo-branco.png" alt="" width="63" height="49"></a><p>Embalagens e descartáveis para o segmento alimentício.</p></div>
+      <div><h2>Explore</h2><a href="produtos/index.html" data-page-link="produtos/">Catálogo</a><a href="#segmentos">Segmentos</a><a href="#personalizacao">Personalização</a></div>
+      <div><h2>Sobre a Jin</h2><a href="quem-somos/index.html" data-page-link="quem-somos/">Quem somos</a><a href="contato/index.html#unidades" data-page-link="contato/" data-page-hash="#unidades">Nossas unidades</a><a href="#contato">Perguntas frequentes</a></div>
+      <div><h2>Fale com a Jin</h2><a href="tel:+551937467000">(19) 3746-7000</a><a href="mailto:sac@jin.com.br">sac@jin.com.br</a><a href="https://wa.me/5519997794448">WhatsApp comercial</a></div>
+    </div>
+    <div class="container footer-bottom"><span>Jin Embalagens</span><a href="https://jin.com.br/">Site oficial</a></div>
+  </footer>
+  <dialog id="product-dialog" class="dialog" aria-labelledby="product-dialog-title">
+    <div class="dialog-top"><h2 id="product-dialog-title">Detalhes do produto</h2><button class="icon-button close-dialog" type="button" aria-label="Fechar detalhes" autofocus><span data-icon="x"></span></button></div>
+    <div id="product-detail"></div>
+  </dialog>
+  <dialog id="quote-dialog" class="dialog drawer" aria-labelledby="quote-title">
+    <div class="dialog-top"><h2 id="quote-title">Lista de orçamento</h2><button class="icon-button close-dialog" type="button" aria-label="Fechar lista" autofocus><span data-icon="x"></span></button></div>
+    <div id="quote-items"></div>
+    <form id="quote-form" class="quote-form" hidden>
+      <p>Revise os itens e abra o WhatsApp para enviar o pedido à Jin.</p>
+      <label for="quote-name">Seu nome</label><input id="quote-name" name="name" autocomplete="name" required maxlength="100">
+      <label for="quote-note">Mensagem <span>(opcional)</span></label><textarea id="quote-note" name="note" rows="3" maxlength="500"></textarea>
+      <button type="submit" class="button button-primary"><span data-icon="message"></span> Abrir no WhatsApp</button>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>

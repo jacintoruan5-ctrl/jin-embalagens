@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Encontre os endereços, telefones e mapas das unidades da Jin Embalagens.">
+  <title>Contato e unidades | Jin Embalagens</title>
+  <link rel="icon" href="../assets/jin-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../pages.css">
+  <script defer src="../icons.js"></script>
+  <script defer src="../catalog-data.js"></script>
+  <script defer src="../site-links.js"></script>
+  <script defer src="../page-shell.js"></script>
+  <script defer src="../app.js"></script>
+  <script defer src="../contact-page.js"></script>
+</head>
+<body class="interior" data-section="contato">
+  <div id="site-chrome"></div>
+  <main id="conteudo">
+    <section class="contact-masthead"><div class="container"><nav class="breadcrumbs" aria-label="Navegação estrutural"><a href="../index.html" data-page-link="">Início</a><span aria-current="page">Contato</span></nav><div class="contact-heading"><div><p class="eyebrow">Atendimento Jin</p><h1>Fale com a nossa equipe.</h1></div><p class="lead">Tire dúvidas sobre produtos, peça um orçamento ou encontre a unidade mais próxima.</p></div>
+      <div class="contact-channels"><a href="https://wa.me/5519997794448"><span data-icon="message"></span><div><strong>WhatsApp comercial</strong><small>(19) 99779-4448</small></div></a><a href="tel:+551937467000"><span data-icon="phone"></span><div><strong>Telefone da matriz</strong><small>(19) 3746-7000</small></div></a><a href="mailto:sac@jin.com.br"><span data-icon="at-sign"></span><div><strong>E-mail</strong><small>sac@jin.com.br</small></div></a></div>
+    </div></section>
+    <section class="container inside-section contact-body"><div><p class="eyebrow">Envie sua mensagem</p><h2>Como podemos ajudar?</h2><p class="lead">Preencha os campos e abra a mensagem no seu aplicativo de e-mail. Você confirma o envio por lá.</p><a class="text-link" href="https://jin.com.br/contato/">Usar o formulário oficial da Jin <span data-icon="arrow-up-right"></span></a></div>
+      <form class="contact-form" id="contact-form" aria-describedby="email-handoff">
+        <div><label for="contact-name">Nome completo</label><input id="contact-name" name="name" autocomplete="name" required maxlength="100"></div><div><label for="contact-email">E-mail</label><input id="contact-email" name="email" autocomplete="email" type="email" required maxlength="150"></div>
+        <div><label for="contact-phone">Telefone (opcional)</label><input id="contact-phone" name="phone" autocomplete="tel" type="tel" maxlength="25"></div><div><label for="contact-topic">Assunto</label><select id="contact-topic" name="topic" required><option value="">Selecione um assunto</option><option>Produtos e orçamento</option><option>Personalização</option><option>Entrega e atendimento</option><option>Outros assuntos</option></select></div>
+        <div class="full-field"><label for="contact-message">Mensagem</label><textarea id="contact-message" name="message" rows="5" minlength="10" maxlength="1000" required></textarea></div>
+        <p class="metadata full-field" id="email-handoff">O envio direto pelo site depende de integração com o atendimento da Jin.</p>
+        <div class="full-field"><button class="button button-primary" type="submit">Preparar mensagem <span data-icon="arrow-right"></span></button></div>
+        <div class="full-field contact-draft" id="contact-draft" hidden><p id="contact-status" role="status"></p><a class="text-link" id="open-email" href="mailto:sac@jin.com.br">Abrir aplicativo de e-mail <span data-icon="arrow-up-right"></span></a></div>
+      </form></section>
+    <section class="inside-band inside-section" id="unidades"><div class="container"><p class="eyebrow">Nossas unidades</p><h2>Encontre a Jin mais perto</h2><p class="lead">Confira o endereço, os telefones e o mapa de cada unidade em São Paulo.</p><div id="branches" class="branch-grid"></div></div></section>
+  </main>
+  <div id="site-bottom"></div>
+</body>
+</html>
